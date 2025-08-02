@@ -105,7 +105,7 @@ def test_segment():
 
 def test_classify():
     """Test image classification including training, validation, and prediction phases."""
-    overrides = {"data": "imagenet10", "model": "yolo11n-cls.yaml", "imgsz": 32, "epochs": 1, "save": False}
+    overrides = {"data": "imagenet10", "model": "yolo11n-cls.yaml", "imgsz": 32, "epochs": 1, "save": False, "workers": 2, "batch": 8}
     cfg = get_cfg(DEFAULT_CFG)
     cfg.data = "imagenet10"
     cfg.imgsz = 32
